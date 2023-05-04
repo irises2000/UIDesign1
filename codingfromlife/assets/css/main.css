@@ -1,0 +1,254 @@
+/* #circle {
+	width: 150px;
+	height: 150px;
+	background: blue;
+	border-radius: 150px;
+	top: 203px;
+	left: 480px;
+	position: absolute;
+} */
+
+/* #clip {
+	width: 150px;
+	height: 150px;
+	background: green;
+	clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+	top: 203px;
+	left: 690px;
+	position: absolute;
+
+} */
+
+
+body {
+	background: #ffffff;
+}
+
+#align {
+	display: flex;
+  align-items: center;
+  justify-content: center;	
+  height: 100vh;
+}
+
+#stage {
+	width: 900px;
+	height: 556px;
+	margin: auto;
+	background: rgb(56, 87, 56);
+	position: relative;
+}
+
+#table {
+    width: 877px;
+    height: 266px;
+    background: rgb(255, 255, 255);
+    top: 371px;
+    left: 80px;
+    position: absolute;
+    transform: skew(310deg,182deg);
+}
+
+
+#bookA {
+    width: 133px;
+    height: 14px;
+    background: rgb(240, 156, 88);
+    top: 326px;
+    left: 355px;
+    position: absolute;
+    transform: skew(0deg,350deg);
+}
+
+#bookA1 {
+    width: 87px;
+    height: 14px;
+    background: rgb(255, 229, 191);
+    top: 327px;
+    left: 268px;
+    position: absolute;
+    transform: skew(0deg,14deg);
+}
+
+#bookA2 {
+    width: 133px;
+    height: 22px;
+    background: rgb(255, 198, 112);
+    top: 305px;
+    left: 311px;
+    position: absolute;
+    transform: skew(76deg,350deg);
+}
+
+
+#bookB {
+    width: 212px;
+    height: 24px;
+    background: rgb(255, 199, 14);
+    top: 347px;
+	left: 302px;
+    position: absolute;
+    transform: skew(0deg,350deg);
+}
+
+#bookB1 {
+	width: 122px;
+    height: 24px;
+    background: rgb(241, 241, 241);
+    top: 350px;
+    left: 180px;
+    position: absolute;
+    transform: skew(0deg,14deg)
+}
+
+#bookB2 {
+	width: 211px;
+	height: 31px;
+    background: rgb(253, 255, 145);
+    top: 317px;
+    left: 241px;
+    position: absolute;
+    transform: skew(76deg,350deg);
+}
+
+#bookC {
+    width: 247px;
+    height: 65px;
+    background: rgb(0, 173, 9);
+    top: 368px;
+	left: 312px;
+    position: absolute;
+	transform: skew(0deg,350deg);
+}
+
+#bookC1 {
+	width: 161px;
+    height: 65px;
+    background: rgb(194, 194, 194);
+    top: 370px;
+    left: 151px;
+    position: absolute;
+    transform: skew(0deg,14deg)
+}
+
+#bookC2 {
+    width: 242px;
+    height: 41px;
+    background: rgb(90 241 98);
+    top: 329px;
+    left: 235px;
+    position: absolute;
+    transform: skew(76deg,350deg);
+}
+
+
+#vase {
+	width: 100px;
+	height: 100px;
+	background: rgb(238,174,202);
+	background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+	border-radius: 50%;
+	position: absolute;
+	top: 215px;
+    left: 372px;
+	
+}
+
+#cylinder {
+	width: 25px;
+	height: 35px;
+	/* border-radius: horziontal values / vertical values */
+	border-radius: 50px 50px / 20px 20px;
+	background: rgb(238,174,202);
+	background: linear-gradient(-90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+	position: absolute;
+	top: 194px;
+    left: 409px;
+  }
+
+  #vasehole {
+	width: 20px;
+	height: 7px;
+	background: black;
+	border-radius: 10px / 3.5px;
+	position: absolute;
+	top: 195px;
+    left: 412px;
+  }
+
+  #flower {
+	width: 200px;
+	height: 263px;
+	background-size: 100% 100%;
+	position: absolute;
+	top: -26px;
+    left: 317px;
+  }
+
+
+  #banana1 {
+
+	height: 45px;
+	width: 180px;
+
+	position: absolute;
+	top: 280px;
+    left: 310px;
+
+  }
+
+  #banana1:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 51%;
+	background: rgb(255, 216, 44);
+	transform: skew(0deg, 6deg);
+	border-radius: 30% 60% 70% 70% / 60% 80% 70% 90%;
+  }
+  /* #chevron:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 50%;
+	background: red;
+	transform: skew(0deg, -6deg);
+  } */
+
+  #banana2 {
+
+	height: 45px;
+	width: 190px;
+
+	position: absolute;
+	top: 265px;
+    left: 310px;
+
+  }
+
+  #banana2:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 51%;
+	background: rgb(227 167 0);
+	transform: skew(0deg, -6deg);
+	border-radius: 40% 60% 50% 50% / 50% 60% 40% 40%;
+  }
+
+  #apple {
+    height: 130px;
+    width: 125px;
+    position: absolute;
+    top: 421px;
+    left: 590px;
+    /* background: rgb(170, 26, 7); */
+    background: radial-gradient(ellipse at top, #efc5ca 0%,#d24b5a 36%,#d24b5a 36%,#ba2737 69%,#f18e99 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    border-radius: 70% 50% 60% 50% / 60% 50% 60% 60%;
+  }

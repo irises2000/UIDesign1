@@ -2,12 +2,24 @@
 	margin:  0px;
 	padding:  0px;
 	box-sizing: border-box;
+	/* background-color: darkorange; */
+	/* background-image: url("/assets/brain.png"); */
+}
+
+body {
+		color: lightpink;
+		Font-family: arial;
+		background-color: #fd6bff;
+		}
+		
+.cursive {
+	font-family: cursive;
 }
 
 /* adjusting fonts */
 
 body {
-	font-family: -apple-system, BlinkMacSystemFont, helvetica, arial, sans-serif;
+	font-family: "Times New Roman", Times, serif;
 	transition: background 500ms ease;
 }
 
@@ -28,11 +40,20 @@ h1, p {
 
 ul, ol {
 	margin-left: 20px;
+	list-style-type: none;
 }
 
 img {
-	max-width: 100%;
-	height:  auto;
+	height:  800px;
+	position: absolute;
+	top: 80px;
+	left: 50px;
+	z-index: -5;
+}
+
+a:hover {
+		background: blue;
+		color: white;
 }
 
 /* uncomment the code below to set the grid */
