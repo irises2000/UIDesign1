@@ -2,26 +2,23 @@
 	margin:  0px;
 	padding:  0px;
 	box-sizing: border-box;
-	/* background-color: darkorange; */
-	/* background-image: url("/assets/brain.png"); */
+	text-align: center;
 }
 
 body {
 		color: lightpink;
 		Font-family: arial;
 		background-color: #fd6bff;
+		font-family: "Times New Roman", Times, serif;
 		}
-		
+
+
 .cursive {
 	font-family: cursive;
 }
 
 /* adjusting fonts */
 
-body {
-	font-family: "Times New Roman", Times, serif;
-	transition: background 500ms ease;
-}
 
 p, li {
 	font-size:  22px;
@@ -31,7 +28,7 @@ p, li {
 /* adjusting spacing */
 
 #left-column {
-	padding: 20px;
+	padding: 100px;
 }
 
 h1, p {
@@ -39,16 +36,23 @@ h1, p {
 }
 
 ul, ol {
-	margin-left: 20px;
+	margin-left: 0px;
 	list-style-type: none;
 }
+
+.user_image{
+	display: flex;
+	justify-content: center;
+   }
 
 img {
 	height:  800px;
 	position: absolute;
-	top: 80px;
-	left: 50px;
 	z-index: -5;
+}
+
+a{
+	color:blue;
 }
 
 a:hover {
@@ -56,26 +60,48 @@ a:hover {
 		color: white;
 }
 
-/* uncomment the code below to set the grid */
-
-/*#grid {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
+button{
+	font-size: 1rem;
+	font-weight: bold;
+	border: 2px solid var(--accent-color);
+	background: transparent;
+	color: blue;
+	padding: 0.5rem;
+	margin-bottom: 1rem;
+	border-radius: 5px;
 }
 
-body {
-	overflow: hidden;
+button:hover{
+	background: lightpink;
+	color: white;
+	cursor: pointer;
 }
 
-.scroll {
-	padding:  20px;
-	overflow: scroll;
-	height: 100vh;
+
+/* darkmode version */
+
+body.darkmode {
+	background: black;
+	color: white;
 }
 
-#left-column {
+body.darkmode img{
+	content: url(alien02.png);
 }
 
-#right-column {
-	background: #333;
-}*/
+/* media query */
+#id {
+	display: none;
+}
+@media only screen and (max-width: 812px) { 
+	body {
+		background: beige;
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+	body {
+		background: peru;
+	}
+}
