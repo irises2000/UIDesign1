@@ -1,60 +1,102 @@
-  
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title>Heeyeon | UI Design Programming 1</title>
-  <meta charset="utf-8" />
-
-  <link rel="stylesheet" type="text/css" href="assets/style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script type="text/javascript" src="script.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Document</title>
 </head>
+<body>   
 
-<body>
-  
-
-
-  <div id="grid">
-    <div id="left-column" class="scroll"> 
-      
-      <div class="user_image">
-        <img src="assets/alien01.png" alt="alien"/>
-      </div>
-
-  
-      <div class="user_text">
-        <!-- about me-->
-        <h1><span class = "cursive">Heeyeon</span></h1>  
-
-        <br>
-        <br>
-
-        <!-- projects-->
-        <h2>my projects</h2>
-
-        <br>
-
-        <ul>
-          <li><a href="ascii_town/exterior-heeyeonrha.html">ASCII House</a></li>
-          <li><a href="codingfromlife\canvas.html">Still-life</a></li>
-          <li><a href="https://irises2000.github.io/inmybag/">What's in my bag</a></li>
-          
-          <li><a href="https://irises2000.github.io/SheetsTrial/index.html">For (y)our second neuroplasticity</a></li>
-        </ul>
-
-        <br>
-        <br>
-
-        <!-- button-->
-        <button id="darkmode-button">darkmode</button>
-        <!-- <button id="showhide">Toggle All</button> -->
-
-      </div>
+    <div class="project">
+        <p><a href="ascii_town\exterior-heeyeonrha.html"  target='_blank'>ASCII House</a></p>
     </div>
-  </div>
+    <div class="project">
+        <p><a href="codingfromlife/canvas.html" target='_blank'>Still-life</a></p>
+    </div>
+    <div class="project">
+        <p onclick="window.open('https://irises2000.github.io/inmybag/')">What's in my bag</p>
+    </div>
+    <div class="project">
+        <!-- <div class="btn" onclick="window.open('https://irises2000.github.io/SheetsTrial/index.html')" style="cursor:pointer;"></div> -->
+        <p onclick="window.open('https://irises2000.github.io/SheetsTrial/index.html')">For y(our) second neuroplasticity</p>
+    </div>
+    <div class="project">
+        <p onclick="window.open('https://irises2000.github.io/SheetsTrial/about.html')">Journal of my spare brain</p>
+    </div>
+
+    <script>
+        var txt = "monkey's butt is red";
+        // remove the space between words
+        txt = txt.replace(/ /g, '');
+        // show each word on the screen in random position
+        for (var i = 0; i < txt.length; i++) {
+            document.write("<div class='node' style='left: " + Math.random() * 100 + "%; top: " + Math.random() * 100 + "%;'><div class='hole'></div><span class='word' >" + txt[i] + "</span><div class='order'>" + (i+1) + "</div></div>");
+        }
+        // add id to each word and order
+        var word = document.getElementsByClassName('word');
+        var node = document.getElementsByClassName('node');
+        var hole = document.getElementsByClassName('hole');
+        for (var i = 0; i < word.length; i++) {
+            node[i].setAttribute('id', 'node' + i);
+            word[i].setAttribute('id', 'word' + i);
+            hole[i].setAttribute('id', 'hole' + i);
+        }
+
+        // if the word is clicked, the color will change for a while
+        for (var i = 0; i < word.length; i++) {
+            node[i].addEventListener('click', function() {
+                this.style.color = 'blue';
+                var id = this.getAttribute('id');
+                var node = document.getElementById('node' + id.slice(4));
+                node.style.color = 'blue';                
+                var hole = document.getElementById('hole' + id.slice(4));
+                hole.style.backgroundColor = 'blue';
+                setTimeout(function() {
+                    document.getElementById(id).style.color = 'black';
+                    document.getElementById('node' + id.slice(4)).style.color = 'black';
+                    document.getElementById('hole' + id.slice(4)).style.backgroundColor = 'black';
+                }, 50000);
+            });
+        }
+        // if all the words are clicked at least once, the background color will change
+        var count = 0;
+        for (var i = 0; i < word.length; i++) {
+            node[i].addEventListener('click', function() {
+                count++;
+                if (count == word.length) {
+                    document.body.style.backgroundColor = '#fd6bff';
+                }
+            });
+        }
+    // collect all the divs
+    var divs = document.getElementsByClassName('project');
+    // get window width and height
+    var winWidth = window.innerWidth;
+    var winHeight = window.innerHeight;
+
+    // i stands for "index". you could also call this banana or haircut. it's a variable
+    for ( var i=0; i < divs.length; i++ ) {
+        
+        // shortcut! the current div in the list
+        var thisDiv = divs[i];
+        
+        // get random numbers for each element
+        randomTop = getRandomNumber(0, winHeight);
+        randomLeft = getRandomNumber(0, winWidth);
+        
+        // update top and left position
+        thisDiv.style.top = randomTop +"px";
+        thisDiv.style.left = randomLeft +"px";
+        
+    }
+
+    // function that returns a random number between a min and max
+    function getRandomNumber(min, max) {
+        
+    return Math.random() * (max - min) + min;
+        
+    }
+    </script>
 </body>
 </html>
