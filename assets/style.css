@@ -85,5 +85,18 @@ a:active {
     margin-top: -20px;
     z-index: -1;
     border-bottom: 1px dashed lightgray;
+}
+
+.sign {
+    position: absolute;
+    font-family: 'AppleSDGothicNeoL';
+    font-size: 15px;
+    color: lightgray;
+    transform: translate(-50%, -50%);
+    /* position left bottom of the window */
+    bottom: 0;
+    left: 50%;
+    z-index: -10;
+
 
 }

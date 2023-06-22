@@ -26,6 +26,8 @@
     <div class="project">
         <p onclick="window.open('https://irises2000.github.io/SheetsTrial/about.html')">Journal of my spare brain</p>
     </div>
+    <div class="sign"><p>2023.06.22 Last updated by Heeyeon Rha</p></div>
+
 
     <script>
         var txt = "monkey's butt is red";
@@ -133,6 +135,11 @@
 
             // Append the line to the body
             document.body.appendChild(line);
+
+            // recreate the lines on resize
+            window.addEventListener('resize', function () {
+                location.reload();
+            });
         }
 
     </script>
