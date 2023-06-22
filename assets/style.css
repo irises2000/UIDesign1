@@ -28,31 +28,36 @@ body {
     cursor: pointer;
     transform: translate(-50%, -50%);
     text-align: center;
-
 }
+
+.node:hover .hole{
+    /* background: blue; */
+    box-shadow: 0px 0px 10px blue;
+}
+
 .order {
     font-weight: bold;
 }
-.btn {
-    border-top: 10px solid transparent;
-    border-left: 18px solid black;
-    border-bottom: 10px solid transparent;
-  }
+
 .hole {
     width: 15px;
     height: 15px;
-    background: black;
+    background: lightgray;
     border-radius: 50%;
 }
 
+
 .project {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
     position: absolute;
     top: 100px;
     left: 100px;
     cursor: pointer;
     /* underline */
     text-decoration: underline;
-    text-decoration-skip-ink: none;
+    /* underline distance */
+    text-underline-offset: 1px;
 }
 
 .project:hover {
@@ -64,9 +69,21 @@ a {
     text-decoration: none;
     color: black;
 }
+
 a:hover {
     color: blue;
 }
+
 a:active {
     color: blue;
+}
+
+.line {
+    position: absolute;
+    /* height: 1px;
+    background-color: lightgray; */
+    margin-top: -20px;
+    z-index: -1;
+    border-bottom: 1px dashed lightgray;
+
 }
