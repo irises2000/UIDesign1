@@ -33,7 +33,7 @@
         txt = txt.replace(/ /g, '');
         // show each word on the screen in random position
         for (var i = 0; i < txt.length; i++) {
-            document.write("<div class='node' style='left: " + Math.random() * 100 + "%; top: " + Math.random() * 100  + "%;'><div class='hole'></div><span class='word' >" + txt[i] + "</span><div class='order'>" + (i + 1) + "</div></div>");
+            document.write("<div class='node' style='left: " + Math.random() * 100 + "%; top: " + Math.random() * 100 + "%;'><div class='hole'></div><span class='word' >" + txt[i] + "</span><div class='order'>" + (i + 1) + "</div></div>");
         }
         // add id to each word and order
         var word = document.getElementsByClassName('word');
